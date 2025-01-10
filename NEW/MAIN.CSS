@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: #f5f5f5;
+}
+
+:root {
+  --app-bg-color: #1f1f2e;
+  --app-primary-color: #ff4500; /* Vibrant orange */
+  --app-secondary-color: #29cbe4; /* Bright teal */
+  --app-text-dark-color: rgba(255, 255, 255, 0.9);
+  --app-text-light-color: rgba(255, 255, 255, 0.7);
+  --button-hover: #ff6347;
+}
+
+#ta_app {
+  position: absolute;
+  right: 40%;
+  width: 350px;
+  height: 90%;
+  padding: 20px;
+  background-color: var(--app-bg-color);
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+#ta_app:hover {
+  transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 600px) {
+  #ta_app {
+    right: 20%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #ta_app {
+    right: 10%;
+    width: 320px;
+  }
+}
+
+#ta_header {
+  margin-top: 20px;
+}
+
+#ta_header div.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--app-secondary-color);
+}
+
+#ta_header div.caption {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: var(--app-text-dark-color);
+}
+
+#ta_header div.caption i {
+  position: relative;
+  top: -2px;
+  color: var(--app-primary-color);
+}
+
+#ta_body_chart {
+  position: relative;
+  margin-top: 30px;
+}
+
+#ta_body_chart > div {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#ta_action_btns {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#ta_action_btns .btn {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  border: none;
+  background: linear-gradient(135deg, var(--app-primary-color), var(--button-hover));
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#ta_action_btns .btn:hover {
+  background: linear-gradient(135deg, var(--button-hover), var(--app-primary-color));
+}
+
+#ta_action_btns i.fa {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#ta_body_transactions {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#ta_body_transactions .body_title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--app-text-dark-color);
+}
+
+div.transactions_list > div {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.transactions_list .transactions_thumb i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 8px;
+  background: var(--app-secondary-color);
+  color: var(--app-bg-color);
+  text-align: center;
+}
+
+div.transactions_list .transaction_title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--app-text-light-color);
+}
+
+div.transactions_list .transaction_amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-primary-color);
+}
